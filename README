@@ -23,3 +23,5 @@ For example you can call the program using:
 ffindE2 jobname 2 3
 
 in order to get the second row from your table, which also has 3 collumns.
+
+The file C is a shell script that can be used to automatically compile. It also sets the permissions to 750.
