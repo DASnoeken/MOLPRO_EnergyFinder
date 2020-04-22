@@ -1,13 +1,7 @@
 #!/bin/bash
 echo 'Compiling main.cc'
-g++ -std=c++11 -g -o ffindE main.cc
 g++ -std=c++11 -g -o ffindE2 main2.cc
 echo 'Done'
 echo 'Changing permissions'
-chmod 750 ffindE
 chmod 750 ffindE2
-echo 'Done'
-echo 'Moving to execs'
-mv ffindE /home/dsnoeken/projects/NO-NH3/mp/project/cpp/execs
-mv ffindE2 /home/dsnoeken/projects/NO-NH3/mp/project/cpp/execs
 echo 'Done'

@@ -38,5 +38,5 @@ int main(int argc, char** argv){
 		std::cout<<X<<std::endl<<X.what()<<std::endl<<"You gave "<<argc-1<<" input arguments!"<<std::endl<<"This must lie between 0 and 3."<<std::endl;
 		throw X;
 	}
-	system("\\rm ls.ls");
+	system("rm ls.ls");
 }
