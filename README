@@ -1,0 +1,25 @@
+This is a C++ program to fetch energies from Molpro.
+I made it in such a way that it is required you use a Molpro table, and mark it.
+In other words, in your MOLPRO code you should have for example:
+
+ text,TABLE
+ {table,R,ehf
+ digits,3,16}
+
+Of course, you are free to change the table as you wish.
+
+The program currently requires you to name your outputfiles in a specific way. This is referred to as a key and the jobname.
+
+The key is defined by the name of the MOLPRO outputfiles. The MOLPRO output should be named as "$jobname-$key.out".
+The key should be shaped as ##-##-##-##-... where ## represents a number or a word/letter-number combination. Example (in 3d): potential-R1-P12-T5.out. Where "potential" represents the job name.
+Please also note that it is CRUCIAL that the molpro output is in a table as defined in molpro itself. Molpro can generate a nice table with the table command. 
+The line where a table is made, should be directly preceded by a line that says "text,table" in the input. This is how the program knows where to look for the energies.
+
+Considering input arguments:
+The first input argument should be the jobname you have used. Jobname is defined above. The second and third arguments should define the dimensions of your table.
+However, if you wish to copy a different row from your output, you should use this row number instead of the number of rows.
+For example you can call the program using:
+
+ffindE2 jobname 2 3
+
+in order to get the second row from your table, which also has 3 collumns.
